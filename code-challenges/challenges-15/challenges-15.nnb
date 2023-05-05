@@ -45,7 +45,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function howManyGames(p, d, m, s) {\n    let moneySpent = 0;\n    let numOfGames = 0;\n    let gamePrice = p;\n    for (let i = 0; i < 100; i++) {\n            moneySpent += gamePrice;\n        if (moneySpent <= s) {\n            gamePrice -= d;\n            numOfGames++;\n            if (gamePrice <= m) {\n                gamePrice = m;\n            }\n        } else {\n            break;\n        }\n    }\n    return numOfGames;\n}"
             ],
             "outputs": []
         },
@@ -59,7 +59,7 @@
         {
             "language": "javascript",
             "source": [
-                ""
+                "function squares(a, b) {\n    let count = 0;\n    for (let i = a; i <= b; i++) {\n        let number = Math.sqrt(i);\n        if (Number.isInteger(number)) {\n            count++;\n        }\n    }\n    return count;\n}"
             ],
             "outputs": []
         }
