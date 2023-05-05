@@ -45,7 +45,7 @@
         {
             "language": "javascript",
             "source": [
-                "function howManyGames(p, d, m, s) {\n    let moneySpent = 0;\n    let numOfGames = 0;\n    let gamePrice = p;\n    for (let i = 0; i < 100; i++) {\n            moneySpent += gamePrice;\n        if (moneySpent <= s) {\n            gamePrice -= d;\n            numOfGames++;\n            if (gamePrice <= m) {\n                gamePrice = m;\n            }\n        } else {\n            break;\n        }\n    }\n    return numOfGames;\n}"
+                "function howManyGames(p, d, m, s) {\n    let moneySpent = p;\n    let numOfGames = 0;\n    let gamePrice = p;\n    while (moneySpent <= s) {\n        gamePrice -= d;\n        if (gamePrice <= m) {\n            gamePrice = m;\n        }\n        moneySpent += gamePrice;\n        numOfGames++;\n    }\n    return numOfGames;\n}"
             ],
             "outputs": []
         },
