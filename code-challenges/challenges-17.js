@@ -13,20 +13,19 @@
 // Input: 50, 9
 // Output: [50, 41, 32, 23, 14, 5, -4, 5, 14, 23, 32, 41, 50]
 //
-
+let recursionArr = [];
 const recursionPattern = (int1, int2) => {
-    if (int1 +int2 <= 0) {
-        // const arr = recursionPattern(int1 + int2, int2);
-        // arr.unshift(int1);
-        // return arr;
-        // if()
-          return [];
-      }
-      else {
-           const arr = recursionPattern(int1 - int2, int2);
-             arr.unshift(int1);
-          return  arr;
-      }
+    if( int1 < 0){
+        recursionArr = [];
+        return recursionArr.push(int1);
+    }
+    else
+    {
+        recursionPattern(int1-int2,int2)
+        recursionArr.push(int1);
+        recursionArr.unshift(int1);
+      return recursionArr;
+    }
 }
 // -------------------------------------------------------------------------------------------------------
 
