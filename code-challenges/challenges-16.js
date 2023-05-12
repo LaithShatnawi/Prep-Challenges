@@ -91,7 +91,7 @@ const chickenGradients = (arr) => {
         for (let j = 0; j < arr[i].length; j++) {
             let test = arr[i][j].match(regEx);
             if (test == "chicken") {
-              let arr1 = [arr[i][j]]
+              let arr1 = [arr[i][j]];
                 newArr.push(arr1);
             }
         }
